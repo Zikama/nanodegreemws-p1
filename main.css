@@ -134,36 +134,125 @@ main {
  * Trying out to use Media
  *
  */
-@media screen and (max-width:780px){
+ 
+ /* To toggle the hidden menu on small screens  */
+
+.menubar{
+	width:.1px;height:.1px;display:none;
+}
+.menubar:hover{
+   	 min-height:40px;
+	 min-width:60px;	
+	 border:5px solid transparent;
+	 cursor:pointer;
+	 transition:all .2s ease-in-out;
+	 	
+ }.menubar:active{
+	 min-height:40px;
+	 min-width:60px;
+	 box-shadow: 0 13px 25px rgba(0, 0, 0, 0.26);		 
+	 transition:all .2s ease-in-out;
+ }.menubar:focus{
+	 min-height:40px;
+	 min-width:60px;		 
+	 transition:all .2s ease-in-out;
+ }
+@media screen and (max-width:780px){	
+	*:not(.nav__list){
+        font-size:10pt;		
+	}
+
+	.header{
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
+        min-height: 56px;height: 36px;
+        transition: min-height 0.3s ease-in-out;margin-bottom:.309rem;
+	}
+	.header>div>img{
+        min-height: 36px;height: 26px;margin-left:9px;
+        transition: min-height 0.3s ease-in-out;
+	}.nav,.navf{
+		background:#fff;	
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
+		max-width: 90%;
+		min-width: 70%;
+		max-height: 70%;
+		min-height: 26px;
+		position:absolute;
+		top:3.5pc;left:5px;right:5px;
+		z-index:2;
+        transition: all 8.3s ease-in-out;
+	}
+	.screen_change{
+		display:none;
+		opacity:0;	
+	}
+ .menubar{
+	 min-height:40px;
+	 min-width:50px;
+	 margin-top:10px;
+	 margin-right:5px; 
+	 float:right;
+	 background:url("images/menu.png") no-repeat 100% ;		
+	 border:5px solid transparent;	 
+	 outline-color:#0680ff;
+	 opacity:1;
+	 display:block;
+	 transition:all .2s ease-in-out;
+ }
 	main{
 		max-width: 80%;
         width: 700px;
         margin-left: auto;
         margin-right: auto;		
+	}.nav__item,.nav__list,.nav{
+        margin-left: auto;
+        margin-right: auto;
+        font-size:8pt;		
 	}
-  .hero {
-		max-width: 80%;
-        min-width: 70%;
-        width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-.top-news {
-		max-width: 80%;
-        min-width: 70%;
-        width: 700px;float:auto;
-        margin-left: auto;
-        margin-right: auto;
-   }
-.scores {
-		max-width: 80%;
-        min-width: 70%;
-        width: 700px;float:auto;
+  .hero,.top-news,.scores,.weather {
+		max-width: 100%;
+		width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 }
+@media screen and (max-width:875px){
+	main{
+		max-width: 100%;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;		
+	}
+  .hero,.top-news,.scores,.weather {
+		max-width: 100%;
+		min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}@media screen and (max-width:1024px){
+	.header__title{		
+		 font-size:2.244em;		
+	}
+	main{
+		max-width: 100%;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;		
+	}
+    .hero,.top-news,.scores,.weather {
+		min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav.nav{
+		font-size:14pt;		
+	}.top-news{
+		margin-top:10px;
+	}
+}
+
 /*
+
  *
  * Content
  *scores
