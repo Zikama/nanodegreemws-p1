@@ -185,6 +185,8 @@ main {
 		top:3.5pc;left:5px;right:5px;
 		z-index:2;
         transition: all 1.3s ease-in-out;
+	}h1.header__title{
+		font-size:18pt;font-weight:900;text-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);;
 	}
 	.screen_change{
 		display:none;
